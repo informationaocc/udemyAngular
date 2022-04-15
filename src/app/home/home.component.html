@@ -1,7 +1,12 @@
-<label>Server Name</label>
-<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
+<!-- <label>Server Name</label>
 <input type="text" class="form-control" [(ngModel)]="serverName">
-<p>{{serverName}}</p>
+<p>{{serverName}}</p> -->
 <button class="btn btn-primary" [disabled]="!btnStatus" (click)="onCreateServer()">Add Server</button>
 
-<p>{{serverCreateStatus}}</p>
+<p *ngIf="serverCreated; else noServer">{{serverCreateStatus}}</p>
+<ng-template #noServer>
+    <p>No server not created!</p>
+</ng-template>
+
+<p [ngClass]="{online : serverStatus==='online'}" [ngStyle]="{backgroundColor:getColor()}" *ngFor="let server of servers">Server ID {{serverID}} is {{getserverStatus()}}</p>
+<!-- <p>Server ID {{serverID}} is {{getserverStatus()}}</p> -->
