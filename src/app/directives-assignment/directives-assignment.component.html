@@ -1,0 +1,9 @@
+<h3>Directive Assignment</h3>
+<button class="btn btn-primary" (click)="btnToggle()" >Display Details</button>
+<p *ngIf="displayStatus">
+    This is Directives assignments.
+</p>
+<ul>Log Array
+    <li [ngClass]="{fontClass: item.SNo >= 5 }" [ngStyle]="{backgroundColor:getBackcolor(item.SNo)}" *ngFor="let item of logArray">{{item.SNo+':'+ item.logDateTime }}</li>
+
+</ul>

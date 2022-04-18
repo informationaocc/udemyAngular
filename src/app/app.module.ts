@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { UserComponent } from './user/user.component';
+import { DirectivesAssignmentComponent } from './directives-assignment/directives-assignment.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { UserComponent } from './user/user.component';
     HomeComponent,
     SuccessAlertComponent,
     WarningAlertComponent,
-    UserComponent
+    UserComponent,
+    DirectivesAssignmentComponent
   ],
   imports: [
     BrowserModule,
